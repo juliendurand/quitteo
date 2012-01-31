@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>quitteo</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <listener>
+    <listener-class>com.quitteo.context.WebappContextListener</listener-class>
+  </listener>
+  <servlet>
+    <servlet-name>PDFConverter</servlet-name>
+    <servlet-class>com.quitteo.converter.PDFConverterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PDFConverter</servlet-name>
+    <url-pattern>/converted/*</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DocumentCreatorServlet</display-name>
+    <servlet-name>DocumentCreatorServlet</servlet-name>
+    <servlet-class>com.quitteo.creator.DocumentCreatorServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DocumentCreatorServlet</servlet-name>
+    <url-pattern>/create</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>PreviewServlet</display-name>
+    <servlet-name>PreviewServlet</servlet-name>
+    <servlet-class>com.quitteo.converter.PreviewServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PreviewServlet</servlet-name>
+    <url-pattern>/preview/*</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description>Download file from session</description>
+    <display-name>DownloadServlet</display-name>
+    <servlet-name>DownloadServlet</servlet-name>
+    <servlet-class>com.quitteo.creator.DownloadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DownloadServlet</servlet-name>
+    <url-pattern>/download</url-pattern>
+  </servlet-mapping>
+</web-app>
