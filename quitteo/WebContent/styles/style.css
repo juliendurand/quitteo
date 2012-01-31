@@ -112,3 +112,7 @@ a.download {
 	font-size: 24px;
 }
 
+:invalid {
+  border: 2px solid #ff0000;
+}
+
