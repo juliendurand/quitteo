@@ -222,3 +222,8 @@ cursor: pointer;
 .shadow {
 	box-shadow: 3px 3px 7px #777;
 }
+
+footer {
+	height: 40px;
+	background-color: white;
+}

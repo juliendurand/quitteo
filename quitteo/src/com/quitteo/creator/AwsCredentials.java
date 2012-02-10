@@ -1,6 +1,5 @@
 package com.quitteo.creator;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
@@ -16,8 +15,6 @@ public class AwsCredentials {
 		    properties.load(AwsCredentials.class.getClassLoader().getResourceAsStream("AwsCredentials.properties"));
 		    String accessKey = (String) properties.get("accessKey");
 		    String secretKey = (String) properties.get("secretKey");
-		    System.out.println(accessKey);
-		    System.out.println(secretKey);
 		    _awsCredentials = new BasicAWSCredentials(accessKey, secretKey);
 		} catch (IOException e) {
 			e.printStackTrace();
