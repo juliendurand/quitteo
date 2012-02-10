@@ -6,15 +6,19 @@
 <a class="download" href="download"><img src="images/download.jpeg" />T&eacute;l&eacute;charger le document PDF</a>
 <p>
 <% 
+try{
 PdfPreview images = Pdf2Img.createPreviewImages((byte[])session.getAttribute("quittance"));
 session.setAttribute("pdf", images); 
 
 int p=0;
 for(p=0;p<images.pages.size();p++){
 %>
-<img src="preview/<%=p%>.jpg" style="border:1px solid black; box-shadow: 3px 3px 7px #777;"/>
+<img src="preview/<%=p%>.jpg" class="shadow box"/>
 <p>
 <% 	
+}
+}catch(Exception e){
+	e.printStackTrace();
 }
 %>
 

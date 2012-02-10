@@ -38,7 +38,7 @@ public class DocumentCreatorServlet extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
 	private final Logger logger = Logger.getLogger(getClass().getName());
-	public static SimpleDateFormat dateFormatter = new SimpleDateFormat("dd MMM yyyy", Locale.FRENCH);
+	public static SimpleDateFormat dateFormatter = new SimpleDateFormat("dd MMMM yyyy", Locale.FRENCH);
 	
     /**
      * @see HttpServlet#HttpServlet()
@@ -87,10 +87,11 @@ public class DocumentCreatorServlet extends HttpServlet {
         	//String filename = "quittance" + "." + outputExtension;
 	        //utils.sendFile(response, filename, outputFormat, outputFile);
 	        outputFile.delete();
+			getServletContext().getRequestDispatcher("/pdfpreview.jsp").forward(request,response);
 		}catch (Exception e) {
 			e.printStackTrace();
 		}
-		getServletContext().getRequestDispatcher("/pdfpreview.jsp").forward(request,response);
+
 	}
 
 	private File createDocument(OfficeDocumentConverter converter, File model,
