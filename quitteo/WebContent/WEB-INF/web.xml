@@ -17,13 +17,23 @@
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>DocumentCreatorServlet</display-name>
-    <servlet-name>DocumentCreatorServlet</servlet-name>
-    <servlet-class>com.quitteo.creator.DocumentCreatorServlet</servlet-class>
+    <display-name>QuittanceServlet</display-name>
+    <servlet-name>QuittanceServlet</servlet-name>
+    <servlet-class>com.quitteo.creator.QuittanceServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>DocumentCreatorServlet</servlet-name>
-    <url-pattern>/create</url-pattern>
+    <servlet-name>QuittanceServlet</servlet-name>
+    <url-pattern>/quittance</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <description></description>
+    <display-name>QuittanceRequestServlet</display-name>
+    <servlet-name>QuittanceRequestServlet</servlet-name>
+    <servlet-class>com.quitteo.creator.QuittanceRequestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QuittanceRequestServlet</servlet-name>
+    <url-pattern>/quittancerequest</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>

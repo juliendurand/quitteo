@@ -3,7 +3,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-	<title>Editer une quittance de loyer | quitteo.com</title>
+	<title>Simplifier les quittances de loyer | quitteo.com</title>
 	<link rel="stylesheet" type="text/css" media="all" href="styles/style.css" />
 	<script type="text/javascript" src="javascript/jquery-1.7.1.min.js"></script>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script> 
@@ -23,14 +23,12 @@
 <body>
 	<header>
 				<h1><a href="./" title="Quitteo" rel="home">Quitteo</a></h1>
-				<h2>Pour editer facilement vos quittances de loyer</h2>
+				<h2>Pour simplifier les quittances de loyer</h2>
 	</header>
 	<nav>
 		<ul>
-			<li><a href="#">Accueil</a></li>
-			<li><a href="#">Propri&eacute;taire</a></li>
-			<li><a href="#">Locataire</a></li>
-			<li><a href="#">Blog</a></li>
+			<li><a href="./">Propri&eacute;taire</a></li>
+			<li><a href="./locataire.jsp">Locataire</a></li>
 		</ul>		
 	</nav>
 	<div id="content">

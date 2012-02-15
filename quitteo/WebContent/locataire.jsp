@@ -1,20 +1,20 @@
 <%@ include file="templates/header.jsp" %>
-<H3>Editer une quittance de loyer</H3>
-Vous &ecirc;tes propriétaire d'un logement locatif et vous souhaitez éditer une quittance de loyer&nbsp;? 
+<H3>Demander une quittance de loyer</H3>
+Vous &ecirc;tes locataire de votre logement et vous souhaitez recevoir une quittance de loyer&nbsp;? 
 Cette page est faite pour vous.
 <p/>
-Remplissez le formulaire ci-dessous et téléchargez gratuitement votre quittance de loyer.
+Remplissez le formulaire ci-dessous et téléchargez gratuitement votre lettre de demande de quittance de loyer.
 <p/> 
-Imprimez, signez et envoyez la à votre locataire.
+Imprimez, signez et envoyez la à votre propriétaire.
 <p/>
 C'est simple, rapide et gratuit !
-		<form id="quittance" action="quittance"  method="get" class="shadow form" oninput="t.value = rent.valueAsNumber + charges.valueAsNumber;total.value=t.value;">
+		<form id="quittance" action="quittancerequest"  method="get" class="shadow form" oninput="t.value = rent.valueAsNumber + charges.valueAsNumber;total.value=t.value;">
 		<fieldset>
 			<legend>Bailleur</legend>
 			<ol>
 				<li>
 					<label>Pr&eacute;nom et Nom</label>
-					<input type="text" name="llname" required/>
+					<input type="text" name="llname" placeholder="Pr&eacute;nom et Nom" required/>
 				</li>
 				<li>
 					<label>Adresse</label> 
@@ -58,27 +58,10 @@ C'est simple, rapide et gratuit !
 					<label>Début p&eacute;riode</label> 
 					<input type="date" name="startperiod" class="datepicker" required/>
 				</li>
-				<li>
-					<label>Fin p&eacute;riode</label>
-					<input type="date" name="endperiod" class="datepicker" required/>
-				</li>
-				<li>
-					<label>Loyer</label> 
-					<input type="number" step="0.01" name=rent value="0" required/>
-				</li>
-				<li>
-					<label>Charges</label> 
-					<input type="number" step="0.01" name=charges value="0"/>
-				</li>
-				<li>
-					<label>Total</label> 				
-					<input type="hidden" name="total">
-					<output name=t>0</output>
-				</li>
 			</ol>
 		</fieldset>
 		<fieldset>
-			<button type="submit">Créer la quittance</button>
+			<button type="submit">Créer la lettre de demande de quittance</button>
 		</fieldset>
 	</form>
 	<p>
